@@ -1,0 +1,12 @@
+Plant: 1500, 
+Herbivore: 50, 
+Herbivore2: 0, 
+Carnivore: 50, 
+Carnivore2: 50, 
+Carnivore3: 50, 
+Carnivore4: 30, 
+Carnivore5: 30, 
+Carnivore6: 40, 
+Carnivore7: 40, 
+Carnivore8: 5, 
+

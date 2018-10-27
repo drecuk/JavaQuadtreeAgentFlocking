@@ -1,0 +1,59 @@
+<Predator>
+  <Name>Carnivore8</Name>
+  <Type>Carnivore8</Type>
+  <Description>
+    The thing that eats meat
+  </Description>
+	<Graphic>
+		<Scale>0.8</Scale>
+		<Colour>Blue</Colour>
+	</Graphic>  
+  <Dynamics>
+		<Speed>2</Speed>	
+		<Thrust>5</Thrust>
+		<HuntingThrust>6</HuntingThrust>
+		<FleeingThrust>6</FleeingThrust>
+		<ThrustLimit>0.6</ThrustLimit>	
+		<Eyesight>100</Eyesight>
+		<FOV>0</FOV>
+  </Dynamics>
+  <Physique>		
+		<MaxAge>150</MaxAge>
+		<DeteriorationTime>10</DeteriorationTime>
+		<Resilience>0.6</Resilience>
+		<Energy>0.4</Energy>
+		<EnergyLoss>0.001</EnergyLoss>
+		<EnergyGain>0.01</EnergyGain>
+		<EnergyHuntingLoss>0.002</EnergyHuntingLoss>
+		<EnergyRestThreshold>0.1</EnergyRestThreshold>
+		<EnergyHuntThreshold>0.3</EnergyHuntThreshold>
+		<HungerThreshold>6</HungerThreshold>
+		<FleshIndex>1</FleshIndex>
+		<FamineDeath>2.5</FamineDeath>
+		<FamineDeathRate>0.1</FamineDeathRate>
+  </Physique>
+  <Behaviour>	
+		<Impulse>100</Impulse>
+		<ImpulseRange>200</ImpulseRange>		
+		<SafeDistance>80</SafeDistance>
+		<FeedingDistance>7</FeedingDistance>
+  </Behaviour>    
+  <Reproduction>
+	<SeedCount>1</SeedCount>	
+	<ReproductionAge>0</ReproductionAge>
+	<ReproductionFitness>0.004</ReproductionFitness>
+	<ReproductionDistance>10</ReproductionDistance>
+	<ReproductionProbability>0.92</ReproductionProbability>
+	<ReproductionThreshold>5.5</ReproductionThreshold>
+	<MatureAgeRatio>0.5</MatureAgeRatio>
+  </Reproduction>
+  <Food>Carnivore7</Food>
+  <FoodCategory>Carnivore</FoodCategory>
+  <Predator>null</Predator>
+  <PredatorCategory>Predator</PredatorCategory>
+  <Ecology>
+    <Sunlight L="0.2" U="1.0">0.6</Sunlight>
+	<Temperature L="-4.0" U="80.0">25.0</Temperature>
+	<Humidity L="0.1" U="0.7">0.5</Humidity>		
+  </Ecology>
+</Predator>

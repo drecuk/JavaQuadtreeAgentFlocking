@@ -1,0 +1,23 @@
+<Plant>
+  <Name>Plant</Name>
+  <Type>Plant</Type>
+  <Description>
+    This is a generic tree type for gaming environments.
+  </Description>
+  <Energy>5</Energy>
+  <Scale>1.0</Scale>
+  <InteractionRange>100</InteractionRange>
+  <DispersalDistance>150</DispersalDistance>
+  <SeedCount>16</SeedCount>
+  <CurrentAge>0</CurrentAge>
+  <MaxAge>30</MaxAge>
+  <ReproductionAge>2</ReproductionAge>
+  <Preference>
+    <Sunlight L="0.3" U="1.0">0.9</Sunlight>
+		<Temperature L="-10" U="50.0">38.0</Temperature>
+		<Soil L="0.0" U="0.6">0.4</Soil>
+		<Space L="0.0" U="0.2">0.1</Space>
+		<PH L="5" U="11">8</PH>
+		<Humidity L="0.3" U="0.8">0.6</Humidity>				
+  </Preference>
+</Plant>

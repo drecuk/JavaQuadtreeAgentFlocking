@@ -1,0 +1,59 @@
+<Predator>
+  <Name>Herbivore</Name>
+  <Type>Herbivore</Type>
+  <Description>
+    The thing that eats vegetables
+  </Description>
+	<Graphic>
+		<Scale>0.8</Scale>
+		<Colour>Green</Colour>
+	</Graphic>  
+  <Dynamics>
+		<Speed>1</Speed>	
+		<Thrust>2</Thrust>
+		<HuntingThrust>3</HuntingThrust>
+		<FleeingThrust>3</FleeingThrust>
+		<ThrustLimit>0.5</ThrustLimit>	
+		<Eyesight>180</Eyesight>
+		<FOV>0</FOV>
+  </Dynamics>
+  <Physique>		
+		<MaxAge>150</MaxAge>
+		<DeteriorationTime>10</DeteriorationTime>
+		<Resilience>0.6</Resilience>
+		<Energy>0.3</Energy>
+		<EnergyLoss>0.001</EnergyLoss>
+		<EnergyGain>0.01</EnergyGain>
+		<EnergyHuntingLoss>0.002</EnergyHuntingLoss>
+		<EnergyRestThreshold>0.2</EnergyRestThreshold>
+		<EnergyHuntThreshold>0.3</EnergyHuntThreshold>
+		<HungerThreshold>6</HungerThreshold>
+		<FleshIndex>1</FleshIndex>
+		<FamineDeath>3</FamineDeath>
+		<FamineDeathRate>0.01</FamineDeathRate>
+  </Physique>
+  <Behaviour>	
+		<Impulse>100</Impulse>
+		<ImpulseRange>200</ImpulseRange>		
+		<SafeDistance>80</SafeDistance>
+		<FeedingDistance>3</FeedingDistance>
+  </Behaviour>    
+  <Reproduction>
+	<SeedCount>1</SeedCount>	
+	<ReproductionAge>0</ReproductionAge>
+	<ReproductionFitness>0.003</ReproductionFitness>
+	<ReproductionDistance>10</ReproductionDistance>
+	<ReproductionProbability>0.92</ReproductionProbability>
+	<ReproductionThreshold>4.5</ReproductionThreshold>
+	<MatureAgeRatio>0.5</MatureAgeRatio>	
+  </Reproduction>
+  <Food>Plant</Food>
+  <FoodCategory>Vegetation</FoodCategory>
+  <Predator>Carnivore</Predator>
+  <PredatorCategory>Predator</PredatorCategory>
+  <Ecology>
+    <Sunlight L="0.2" U="1.0">0.6</Sunlight>
+	<Temperature L="-4.0" U="80.0">25.0</Temperature>
+	<Humidity L="0.1" U="0.7">0.5</Humidity>		
+  </Ecology>
+</Predator>

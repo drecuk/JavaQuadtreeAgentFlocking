@@ -1,0 +1,46 @@
+<Predator>
+  <Name>Carni</Name>
+  <Type>Carnivore</Type>
+  <Description>
+    The thing that eats meat
+  </Description>
+	<Graphic>
+		<Scale>0.8</Scale>
+	</Graphic>  
+  <Dynamics>
+		<Speed>1</Speed>	
+		<Thrust>2</Thrust>
+		<HuntingThrust>3</HuntingThrust>
+		<FleeingThrust>4</FleeingThrust>
+		<ThrustLimit>0.5</ThrustLimit>	
+		<Eyesight>150</Eyesight>
+		<FOV>0</FOV>
+  </Dynamics>
+  <Physique>		
+		<MaxAge>150</MaxAge>
+		<DeteriorationTime>10</DeteriorationTime>
+		<Resilience>0.6</Resilience>
+		<Energy>10</Energy>
+		<EnergyLoss>0.001</EnergyLoss>
+		<EnergyRestThreshold>2</EnergyRestThreshold>
+		<EnergyHuntThreshold>6</EnergyHuntThreshold>
+		<HungerThreshold>6</HungerThreshold>
+		<FleshIndex>1</FleshIndex>
+  </Physique>
+  <Behaviour>	
+		<Impulse>100</Impulse>
+		<ImpulseRange>200</ImpulseRange>		
+		<SafeDistance>80</SafeDistance>
+		<FeedingDistance>3</FeedingDistance>
+  </Behaviour>    
+  <Reproduction>
+	<SeedCount>10</SeedCount>	
+	<ReproductionAge>20</ReproductionAge>
+	<MatureAgeRatio>0.5</MatureAgeRatio>
+  </Reproduction>
+  <Ecology>
+    <Sunlight L="0.2" U="1.0">0.6</Sunlight>
+	<Temperature L="-4.0" U="80.0">25.0</Temperature>
+	<Humidity L="0.1" U="0.7">0.5</Humidity>		
+  </Ecology>
+</Predator>

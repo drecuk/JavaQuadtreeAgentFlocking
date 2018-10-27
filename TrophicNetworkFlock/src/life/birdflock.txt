@@ -1,0 +1,78 @@
+// ------------ collect flocking vectors:: SEPARATION
+			int sepNum = 0; float sepRatio = 0.6f;
+			for (int i=0; i<clanIndices.size(); i++)	// clanIndices was collected earlier
+			{
+				Bird friend = (Bird)worldObjects.get(clanIndices.get(i));
+				if ((Utility.distance(position.x, position.y, friend.position.x, friend.position.y) < 60))
+				{
+					sep.x -= (this.position.x - friend.position.x);// / sepRatio; // proper
+					sep.y -= (this.position.y - friend.position.y);// / sepRatio; // proper
+					sepNum++;
+				}
+			}
+			if(sepNum > 0)	// average out
+			{
+				//sep.x = sep.x / sepNum;
+				//sep.y = sep.y / sepNum;
+			}
+			
+			// ------------ collect flocking vectors:: COHESION
+			int cohNum = 0, cohRatio = 100;
+			for (int i=0; i<clanIndices.size(); i++)	// clanIndices was collected earlier
+			{
+				Bird friend = (Bird)worldObjects.get(clanIndices.get(i));
+				coh.x += friend.position.x;
+				coh.y += friend.position.y;
+				
+				cohNum++;
+			}
+			if(cohNum > 0)	// average out
+			{
+				// average the centre of mass
+				coh.x = (coh.x / cohNum);
+				coh.y = (coh.y / cohNum);
+				
+				// move towards the centre position
+				coh.x = (coh.x - this.position.x) / cohRatio;
+				coh.y = (coh.y - this.position.y) / cohRatio;
+			}
+			
+			// ------------ collect flocking vectors:: ALIGNMENT
+			int aligNum = 0;
+			for (int i=0; i<clanIndices.size(); i++)	// clanIndices was collected earlier
+			{
+				Bird friend = (Bird)worldObjects.get(clanIndices.get(i));
+				alig.x += Math.cos(friend.angle*Math.PI/180); 
+				alig.y += Math.sin(friend.angle*Math.PI/180);
+				
+				aligNum++;
+			}
+			if(aligNum > 0)	// average out
+			{
+				alig.x = (alig.x / aligNum);
+				alig.y = (alig.y / aligNum);
+			}
+			
+			// ------------ collect flocking vectors:: velocity
+			int velNum = 0;
+			for (int i=0; i<clanIndices.size(); i++)	// clanIndices was collected earlier
+			{
+				Bird friend = (Bird)worldObjects.get(clanIndices.get(i));
+				vel.x += friend.velocityX; 
+				vel.y += friend.velocityY;
+				
+				velNum++;
+			}
+			if(velNum > 0)
+			{
+				vel.x = ((vel.x/velNum) - this.velocityX) / 8;
+				vel.y = ((vel.y/velNum) - this.velocityY) / 8;
+			}
+			
+			// ------------ collect flocking vectors:: tendancy
+			if(humanIndex != -1)
+			{
+				Human friend = (Human)worldObjects.get(humanIndex);
+				tend.x = friend.position.x;
+				tend.y = friend.position.y;
+			}
