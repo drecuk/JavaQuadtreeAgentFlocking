@@ -12,3 +12,6 @@ The code presented here is now a 'systems-level' development, as a 'sketch' for 
 - Quadtree agent interaction
 - Hierarchical object-oriented code for polymorphic behaviour
 - Flocking implementation tested on quadtree interaction for large scale simulation
+
+## ACKNOWLEDGEMENTS
+“This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme ( ERC funded project No. 670518 LOST FRONTIERS)”
